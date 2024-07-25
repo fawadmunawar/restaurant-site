@@ -3,6 +3,7 @@ import Dishes from "./components/Dishes";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
+import Mission from "./components/Mission";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navbar />
         <Dishes />
         <About />
+        <Mission />
       </main>
     </>
   );

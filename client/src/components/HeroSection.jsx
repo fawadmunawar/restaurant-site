@@ -18,7 +18,7 @@ const HeroSection = () => {
               transition={{
                 type: "spring",
                 stiffness: "400",
-                damping: "20"
+                damping: "30"
               }}
              src={ logo } alt="Restaura" className='w-full p-4'/>
             <p className='p-4 text-lg tracking-tighter text-white'>Paris</p>

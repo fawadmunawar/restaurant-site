@@ -23,11 +23,11 @@ const HeroSection = () => {
       <div className="relative z-20 flex h-screen flex-col justify-end pb-20">
         <motion.img
           initial={{ scale: 2 }}
-          animate={{ scale: 1 }}
+          whileInView={{ scale: 1 }}
           transition={{
             type: "spring",
-            stiffness: "400",
-            damping: "30",
+            stiffness: "200",
+            damping: "60",
           }}
           src={logo}
           alt="Restaura"

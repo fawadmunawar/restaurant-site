@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <main className="overflow-y-hidden text-neutral-200 antialiased bg-black">
+      <main className="overflow-hidden text-neutral-200 antialiased bg-black">
         <HeroSection />
         <Navbar />
         <Dishes />

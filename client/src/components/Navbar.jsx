@@ -9,8 +9,8 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleRefresh = () => {
-    window.location.reload()
-  }
+    window.location.reload();
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -31,7 +31,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-4 z-50 flex w-full flex-col items-center justify-center">
       <div className="flex w-full items-center justify-between overflow-y-hidden p-4 backdrop-blur-lg lg:m-2 lg:w-[50rem] lg:rounded-full lg:shadow-lg">
-        <img src={logo} alt="logo" width={80} height={22} className="cursor-pointer" onClick={toggleRefresh}/>
+        <img
+          src={logo}
+          alt="logo"
+          width={80}
+          height={22}
+          className="cursor-pointer"
+          onClick={toggleRefresh}
+        />
         <div className="hidden space-x-6 lg:flex">
           {LINKS.map((link, index) => (
             <a
@@ -47,22 +54,22 @@ const Navbar = () => {
           ))}
         </div>
         <div className="lg:hidden">
-            <button onClick={toggleMobileMenu}>
-                {isMobileMenuOpen ? <FaTimes /> : <FaBarsStaggered />}
-            </button>
+          <button onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <FaTimes /> : <FaBarsStaggered />}
+          </button>
         </div>
       </div>
       {isMobileMenuOpen && (
         <div className="w-full backdrop-blur-lg lg:hidden flex flex-col gap-5">
           {LINKS.map((link, index) => (
             <a
-            href={`#${link.targetId}`}
-            className={"block p-4 uppercase tracking-tighter"}
-            onClick={(e) => handleScroll(e, link.targetId)}
-            key={index} 
-          >
-            {link.text}
-          </a>
+              href={`#${link.targetId}`}
+              className={"block p-4 uppercase tracking-tighter"}
+              onClick={(e) => handleScroll(e, link.targetId)}
+              key={index}
+            >
+              {link.text}
+            </a>
           ))}
         </div>
       )}
